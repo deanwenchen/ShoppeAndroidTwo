@@ -1,0 +1,9 @@
+.gradle/
+*.iml
+*.iws
+*.ipr
+.idea/
+.DS_Store
+local.properties
+.claude/sessions/
+.claude/checkpoints/

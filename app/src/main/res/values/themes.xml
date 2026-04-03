@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ShoppeAndroidTwo" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:colorPrimary">@color/shoppe_primary</item>
+        <item name="android:colorPrimaryDark">@color/shoppe_primary_dark</item>
+        <item name="android:colorAccent">@color/shoppe_accent</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/shoppe_surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+</resources>

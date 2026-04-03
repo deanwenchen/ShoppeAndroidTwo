@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npx vite --host)",
+      "Bash(powershell Get-Content:*)",
+      "Bash(npx vite)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(npx vite --port 3000)",
+      "Bash(move:*)",
+      "Bash(npm start)",
+      "mcp__figma__get_design_context",
+      "Bash(dir:*)",
+      "mcp__figma__get_metadata",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "mcp__figma__search_design_system",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(mkdir -p \"D:\\\\Claude\\\\Figma\\\\ShoppeAndroidTwo\\\\.claude\\\\checkpoints\")",
+      "Bash(mkdir -p \"D:\\\\Claude\\\\Figma\\\\ShoppeAndroidTwo\\\\.claude\\\\sessions\")",
+      "Bash(cd:*)",
+      "Bash(rm -rf \"gradle/wrapper\"*)",
+      "Bash(mkdir -p gradle/wrapper)",
+      "Bash(cp \"D:\\\\Claude\\\\Figma\\\\AndroidDemo\\\\gradle\\\\wrapper\\\\gradle-wrapper.jar\" gradle/wrapper/)",
+      "Bash(cp \"D:\\\\Claude\\\\Figma\\\\AndroidDemo\\\\gradle\\\\wrapper\\\\gradle-wrapper.properties\" gradle/wrapper/)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "figma"
+  ]
+}

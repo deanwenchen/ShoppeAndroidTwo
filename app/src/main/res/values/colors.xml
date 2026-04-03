@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Shoppe Brand Colors -->
+    <color name="shoppe_primary">#FF1a73e8</color>
+    <color name="shoppe_primary_dark">#FF1557b0</color>
+    <color name="shoppe_accent">#FFff6d00</color>
+    <color name="shoppe_background">#FFfafafa</color>
+    <color name="shoppe_surface">#FFFFFFFF</color>
+    <color name="shoppe_error">#FFd32f2f</color>
+    <color name="shoppe_on_primary">#FFFFFFFF</color>
+    <color name="shoppe_on_surface">#FF202124</color>
+    <color name="shoppe_outline">#FFdadce0</color>
+</resources>

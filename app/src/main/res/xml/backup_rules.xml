@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="backup_description">Backup configuration for Shoppe app</string>
+    <string name="exclusion_description">Exclude sensitive data from backup</string>
+
+    <full-backup-content>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="device.xml"/>
+    </full-backup-content>
+</resources>
