@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.shoppe.android.ui.components.StatusBarSpacer
 import com.shoppe.android.ui.theme.ShoppePrimary
+import com.shoppe.android.viewmodels.CartViewModel
 
 // Sample product data
 data class Product(
@@ -45,9 +46,16 @@ val sampleProducts = listOf(
 val categories = listOf("All", "Shoes", "Bags", "Accessories", "Clothing", "Jewelry")
 
 @Composable
-fun ShopPage() {
+fun ShopPage(
+    onNavigateToCart: () -> Unit = {},
+    cartViewModel: CartViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+) {
     var selectedCategory by remember { mutableStateOf("All") }
     var searchQuery by remember { mutableStateOf("") }
+
+    // Observe cart state from ViewModel
+    val cartState by cartViewModel.state.collectAsState()
+    val cartItemCount = cartState.totalItems
 
     Box(
         modifier = Modifier
@@ -74,18 +82,38 @@ fun ShopPage() {
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFF202020)
                     )
-                    // Cart icon placeholder
+                    // Cart icon with badge
                     Box(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .background(Color(0xFFF5F5F5)),
+                            .background(Color(0xFFF5F5F5))
+                            .clickable(onClick = onNavigateToCart),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = "🛒",
                             fontSize = 18.sp
                         )
+
+                        // Cart badge showing item count
+                        if (cartItemCount > 0) {
+                            Box(
+                                modifier = Modifier
+                                    .align(Alignment.TopEnd)
+                                    .size(16.dp)
+                                    .clip(CircleShape)
+                                    .background(ShoppePrimary),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = cartItemCount.toString(),
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color.White
+                                )
+                            }
+                        }
                     }
                 }
             }
